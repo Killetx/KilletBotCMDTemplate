@@ -1,5 +1,5 @@
 //ALL OF THE FOLLOWING WITHIN THE BORDER OF THE "-" WALL IS SIMPLY DECLARING CONSTANTS THAT ARE NECESSARY FOR THE BOT TO OPERATE
-//-------------------------------------------------------------------------------------------------------------------------------
+
 //NODE.JS FILE SYSTEM
 const fs = require('fs');
 //WHAT ALLOWS THE BOT TO LOG IN
@@ -13,6 +13,7 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 // MAKES  A LIST OF EXISTING COMMAND FILES IN THE FILE LABELED "COMMANDS" IN THIS CASE IT'S JUST "HI.JS"
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+//-------------------------------------------------------------------------------------------------------------------------------
 
 //ESTABLISHES A COMMAND NAME AND THE COMMAND OF EACH OF THE FILES LISTED IN THE COMMANDS FOLDER
 for (const file of commandFiles) {
